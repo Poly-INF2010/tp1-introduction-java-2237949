@@ -11,9 +11,9 @@ public class Ellipse extends BaseShape {
      * @param heightDiameter Height of the Ellipse
      */
     public Ellipse(Double widthDiameter, Double heightDiameter) {
-        for(double i = -widthDiameter/2; i < widthDiameter; i+=0.5)
+        for(double i = -widthDiameter/2; i < widthDiameter/2; i+=0.5)
         {
-            for(double j = -heightDiameter/2; j < heightDiameter; j+= 0.5){
+            for(double j = -heightDiameter/2; j < heightDiameter/2; j+= 0.5){
                 double equation = (Math.pow(i,2))/Math.pow(widthDiameter/2,2) + (Math.pow(j,2))/Math.pow(heightDiameter/2,2);
                 if(equation <= 1){
                     Point2d point = new Point2d(i, j);

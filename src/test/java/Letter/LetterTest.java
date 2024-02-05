@@ -18,6 +18,7 @@ public class LetterTest {
         tesseract.setLanguage("fra");
 
         LetterPlacer letterPlacer = new LetterPlacer();
+
         letterPlacer.placeNext('B');
         letterPlacer.placeNext('O');
         letterPlacer.placeNext('N');

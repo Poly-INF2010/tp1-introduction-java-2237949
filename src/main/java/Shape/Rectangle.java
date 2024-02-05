@@ -11,9 +11,9 @@ public class Rectangle extends BaseShape {
      * @param height Height of the rectangle
      */
     public Rectangle(Double width, Double height) {
-        for(double i = -width/2; i < width; i += 0.5)
+        for(double i = -width/2; i < width/2; i += 0.5)
         {
-            for(double j = -height/2; j < height; j++)
+            for(double j = -height/2; j < height/2; j++)
             {
                 Point2d point = new Point2d(i, j);
                 this.add(point);
