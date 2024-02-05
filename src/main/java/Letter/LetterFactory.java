@@ -48,8 +48,8 @@ public final class LetterFactory {
         Rectangle rectangle = new Rectangle(stripeThickness + 3, maxHeight);
         Circle circle = new Circle(halfMaxHeight);
         Circle secondCircle = new Circle(halfMaxHeight);
-        Circle thirdCircle = new Circle((halfMaxHeight)/1.5);
-        Circle fourthCircle = new Circle((halfMaxHeight)/1.5);
+        Circle thirdCircle = new Circle((halfMaxHeight)/1.4);
+        Circle fourthCircle = new Circle((halfMaxHeight)/1.4);
         Point2d point = new Point2d(circle.getMaxX(), -rectangle.getMaxY()/2);
         Point2d point2 = new Point2d(circle.getMaxX(), rectangle.getMaxY()/2);
 
@@ -93,7 +93,7 @@ public final class LetterFactory {
      */
     public static BaseShape create_E() {
         Rectangle firstRectangle = new Rectangle(halfStripeThickness,maxHeight - 10);
-        Rectangle secondRectangle = new Rectangle(halfStripeThickness, halfMaxHeight * 0.8);
+        Rectangle secondRectangle = new Rectangle(halfStripeThickness, maxWidth);
         Rectangle thirdRectangle = secondRectangle.clone();
         Rectangle fourthRectangle = secondRectangle.clone();
 
@@ -103,9 +103,9 @@ public final class LetterFactory {
         fourthRectangle.rotate(fourthRectangle.getCoords(), rotation);
 
         double yTranslation = secondRectangle.getMaxX() - 5;
-        Point2d point = new Point2d(yTranslation, -firstRectangle.getMaxY() - 5);
+        Point2d point = new Point2d(yTranslation, -firstRectangle.getMaxY() - 3);
         Point2d point2 = new Point2d(yTranslation, 0.0);
-        Point2d point3 = new Point2d(yTranslation, firstRectangle.getMaxY() - 5);
+        Point2d point3 = new Point2d(yTranslation, firstRectangle.getMaxY() - 3);
         secondRectangle.translate(secondRectangle.getCoords(), point);
         thirdRectangle.translate(thirdRectangle.getCoords(), point2);
         fourthRectangle.translate(fourthRectangle.getCoords(), point3);
